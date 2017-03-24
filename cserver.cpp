@@ -1,12 +1,3 @@
-//
-// async_tcp_echo_server.cpp
-// ~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-// Copyright (c) 2003-2016 Christopher M. Kohlhoff (chris at kohlhoff dot com)
-//
-// Distributed under the Boost Software License, Version 1.0. (See accompanying
-// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
-//
 #define ASIO_STANDALONE
 
 #include <cstdlib>
@@ -70,7 +61,7 @@ private:
         }
     }
 
-    void parse_cmd() {
+    void parse_cmd() noexcept {
         int order_num = 0;
         std::string cmd_type = "REPLACE";
         std::string tmp;
